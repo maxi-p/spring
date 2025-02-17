@@ -5,6 +5,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class Duck {
     public Duck() {
-        System.out.println("Duck created");
+        System.out.println("EAGER Duck created");
     }
 }

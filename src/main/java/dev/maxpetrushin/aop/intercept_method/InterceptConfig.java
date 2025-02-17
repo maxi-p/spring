@@ -7,7 +7,7 @@ import org.springframework.context.annotation.*;
 @Configuration
 @ComponentScan("dev.maxpetrushin.aop.intercept_method")
 @EnableAspectJAutoProxy
-public class Config {
+public class InterceptConfig {
     @Bean
     public LoggingAspect aspect(@Autowired ApplicationContext context) {
         ChangeDecision decision = context.getBean(ChangeDecision.class);

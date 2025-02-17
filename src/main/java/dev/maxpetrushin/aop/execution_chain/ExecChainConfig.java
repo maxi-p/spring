@@ -8,7 +8,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @Configuration
 @ComponentScan("dev.maxpetrushin.aop.execution_chain")
 @EnableAspectJAutoProxy
-public class Config {
+public class ExecChainConfig {
     @Bean
     LoggingAspect loggingAspect() {
         return new LoggingAspect();

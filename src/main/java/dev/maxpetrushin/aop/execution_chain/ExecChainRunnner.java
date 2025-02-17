@@ -5,7 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class ExecChainRunnner {
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext(ExecChainConfig.class);
 
         CustomService service = context.getBean(CustomService.class);
         service.exec();

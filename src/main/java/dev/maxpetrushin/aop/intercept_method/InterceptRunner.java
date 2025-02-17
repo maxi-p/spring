@@ -11,9 +11,9 @@ public class InterceptRunner {
     private static Logger LOGGER = Logger.getLogger(AnnotAspectRunner.class.getName());
 
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext(InterceptConfig.class);
 
-        CommentService service = context.getBean(CommentService.class);
+        CommentService service = context.getBean("commentService4", CommentService.class);
         String result = service.publishComment(new Comment("AOP", "Max"));
         LOGGER.info(result + " (didn't change the agruments and return)\n");
 

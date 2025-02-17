@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan({"dev.maxpetrushin.beans.wiring", "dev.maxpetrushin.beans.stereotype"})
-public class Config {
+public class BeanConfig {
     @Bean
     public Parrot parrot() {
         Parrot parrot = new Parrot();

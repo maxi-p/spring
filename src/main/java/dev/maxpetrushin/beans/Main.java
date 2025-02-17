@@ -8,15 +8,15 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class);
 
-        UserService userService = context.getBean(UserService.class);
-        CommentService commentService = context.getBean(CommentService.class);
-        CommentRepo commentRepo = context.getBean(CommentRepo.class);
+        UserService userService = context.getBean("userService1", UserService.class);
+        CommentService commentService = context.getBean("commentService1", CommentService.class);
+        CommentRepo commentRepo = context.getBean("commentRepo1", CommentRepo.class);
 
         System.out.println(userService.commentRepo == commentService.commentRepo);
         System.out.println(userService.commentRepo == commentRepo);
 
-        System.out.println(context.getBean(CommentService.class).commentRepo == context.getBean(UserService.class).commentRepo);
+        System.out.println(context.getBean("commentService1", CommentService.class).commentRepo == context.getBean(UserService.class).commentRepo);
     }
 }

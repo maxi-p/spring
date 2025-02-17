@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 public class AnnotAspectRunner {
     private static Logger LOGGER = Logger.getLogger(AnnotAspectRunner.class.getName());
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext(AOPAnnotationConfig.class);
 
         PostService postService = context.getBean(PostService.class);
 

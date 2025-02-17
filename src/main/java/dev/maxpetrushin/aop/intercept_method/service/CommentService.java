@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.logging.Logger;
 
-@Service
+@Service(value="commentService4")
 public class CommentService {
     private static Logger LOGGER = Logger.getLogger(CommentService.class.getName());
 

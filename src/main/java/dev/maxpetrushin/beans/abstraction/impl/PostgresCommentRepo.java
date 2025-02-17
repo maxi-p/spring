@@ -4,7 +4,7 @@ import dev.maxpetrushin.beans.abstraction.CommentRepo;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service(value="postgresCommentRepo")
 @Primary
 public class PostgresCommentRepo implements CommentRepo {
     @Override
