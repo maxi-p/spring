@@ -1,3 +1,9 @@
 name:
   service:
     url: "http://localhost:9797"
+
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5434/cover_gen"
+    username: "root"
+    password: "root"
